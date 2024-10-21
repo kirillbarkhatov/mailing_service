@@ -95,8 +95,6 @@ class Mailing(models.Model):
 
     recipients = models.ManyToManyField(
         Recipient,
-        null=True,
-        blank=True,
         related_name="mailing",
         verbose_name="Получатели",
     )
