@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db import models
 
 # Create your models here.
@@ -70,10 +72,12 @@ class Mailing(models.Model):
     ]
 
     first_send_at = models.DateTimeField(
+        default=datetime.now(),
         verbose_name="Дата и время первой отправки",
     )
 
     finish_send_at = models.DateTimeField(
+        default=datetime.now(),
         verbose_name="Дата и время окончания отправки",
     )
 
