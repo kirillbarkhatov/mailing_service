@@ -1,3 +1,9 @@
+// Получаем данные из атрибута HTML
+const chartDataElement = document.getElementById('chart-data');
+const attemptSuccessCount = parseInt(chartDataElement.getAttribute('data-success'), 10);
+const attemptFailureCount = parseInt(chartDataElement.getAttribute('data-failure'), 10);
+
+
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'bar', // тип графика
@@ -5,7 +11,7 @@ const myChart = new Chart(ctx, {
         labels: ['Успешно', 'Неуспешно'],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19],
+            data: [attemptSuccessCount, attemptFailureCount],
             backgroundColor: [
 
                 'rgba(54, 162, 235, 0.2)',

@@ -1,4 +1,5 @@
 from datetime import datetime
+from lib2to3.fixes.fix_input import context
 
 from django.core.mail import send_mail
 from django.http import HttpResponse
@@ -14,6 +15,24 @@ from mailing.forms import RecipientForm, MessageForm, MailingForm
 
 class IndexView(TemplateView):
     template_name = "mailing/index.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        mailing_attempt = MailingAttempt.objects.all()
+        attempt_count = mailing_attempt.count()
+        attempt_success_count = mailing_attempt.filter(status="success").count()
+        attempt_failure_count = mailing_attempt.filter(status="failure").count()
+        mailing_count = Mailing.objects.count()
+        mailing_running_count = Mailing.objects.filter(status="running").count()
+        recipient_count = Recipient.objects.count()
+        context["object_list"] = mailing_attempt
+        context["attempt_count"] = attempt_count
+        context["attempt_success_count"] = attempt_success_count
+        context["attempt_failure_count"] = attempt_failure_count
+        context["mailing_count"] = mailing_count
+        context["mailing_running_count"] = mailing_running_count
+        context["recipient_count"] = recipient_count
+        return context
 
 
 # CRUD для модели "Получатель рассылки"
