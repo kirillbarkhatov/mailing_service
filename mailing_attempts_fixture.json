@@ -1,0 +1,382 @@
+[
+{
+    "model": "mailing.mailingattempt",
+    "pk": 1,
+    "fields": {
+        "attempted_at": "2024-10-26T19:57:36.594Z",
+        "status": "success",
+        "mail_server_response": "skypro1@mailinator.com: Успешно отправлено",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 2,
+    "fields": {
+        "attempted_at": "2024-10-26T19:57:38.238Z",
+        "status": "success",
+        "mail_server_response": "skypro2@mailinator.com: Успешно отправлено",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 3,
+    "fields": {
+        "attempted_at": "2024-10-26T19:57:39.803Z",
+        "status": "success",
+        "mail_server_response": "skypro3@mailinator.com: Успешно отправлено",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 4,
+    "fields": {
+        "attempted_at": "2024-10-26T19:57:41.869Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 5,
+    "fields": {
+        "attempted_at": "2024-10-26T20:02:35.954Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 2
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 6,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:43.129Z",
+        "status": "success",
+        "mail_server_response": "skypro1@mailinator.com: Успешно отправлено",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 7,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:44.574Z",
+        "status": "success",
+        "mail_server_response": "skypro2@mailinator.com: Успешно отправлено",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 8,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:46.097Z",
+        "status": "success",
+        "mail_server_response": "skypro3@mailinator.com: Успешно отправлено",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 9,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:47.115Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 10,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:50.590Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 2
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 11,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:54.526Z",
+        "status": "success",
+        "mail_server_response": "skypro7@mailinator.com: Успешно отправлено",
+        "mailing": 4
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 12,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:56.171Z",
+        "status": "success",
+        "mail_server_response": "skypro8@mailinator.com: Успешно отправлено",
+        "mailing": 4
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 13,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:00.096Z",
+        "status": "success",
+        "mail_server_response": "skypro1@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 14,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:01.586Z",
+        "status": "success",
+        "mail_server_response": "skypro2@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 15,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:03.801Z",
+        "status": "success",
+        "mail_server_response": "skypro3@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 16,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:04.807Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 17,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:06.444Z",
+        "status": "success",
+        "mail_server_response": "skypro5@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 18,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:08.086Z",
+        "status": "success",
+        "mail_server_response": "skypro6@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 19,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:09.501Z",
+        "status": "success",
+        "mail_server_response": "skypro7@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 20,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:10.655Z",
+        "status": "failure",
+        "mail_server_response": "skypro10@linator.commmm: Ошибка: {'skypro10@linator.commmm': (550, b'non-local recipient verification failed')}",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 21,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:12.288Z",
+        "status": "success",
+        "mail_server_response": "skypro8@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 22,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:13.750Z",
+        "status": "success",
+        "mail_server_response": "skypro9@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 23,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:17.819Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 6
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 24,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:19.977Z",
+        "status": "success",
+        "mail_server_response": "skypro6@mailinator.com: Успешно отправлено",
+        "mailing": 6
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 25,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:20.927Z",
+        "status": "failure",
+        "mail_server_response": "skypro10@linator.commmm: Ошибка: {'skypro10@linator.commmm': (550, b'non-local recipient verification failed')}",
+        "mailing": 6
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 26,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:22.362Z",
+        "status": "success",
+        "mail_server_response": "skypro9@mailinator.com: Успешно отправлено",
+        "mailing": 6
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 27,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:27.312Z",
+        "status": "success",
+        "mail_server_response": "skypro5@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 28,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:28.884Z",
+        "status": "success",
+        "mail_server_response": "skypro6@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 29,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:30.338Z",
+        "status": "success",
+        "mail_server_response": "skypro7@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 30,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:31.809Z",
+        "status": "success",
+        "mail_server_response": "skypro8@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 31,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:33.287Z",
+        "status": "success",
+        "mail_server_response": "skypro9@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 32,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:41.867Z",
+        "status": "success",
+        "mail_server_response": "skypro5@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 33,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:43.463Z",
+        "status": "success",
+        "mail_server_response": "skypro6@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 34,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:44.907Z",
+        "status": "success",
+        "mail_server_response": "skypro7@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 35,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:46.362Z",
+        "status": "success",
+        "mail_server_response": "skypro8@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 36,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:47.979Z",
+        "status": "success",
+        "mail_server_response": "skypro9@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 37,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:56.008Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 8
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 38,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:57.025Z",
+        "status": "failure",
+        "mail_server_response": "skypro10@linator.commmm: Ошибка: {'skypro10@linator.commmm': (550, b'non-local recipient verification failed')}",
+        "mailing": 8
+    }
+}
+]
