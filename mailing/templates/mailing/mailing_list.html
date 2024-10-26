@@ -32,8 +32,17 @@
             <td>{{ mailing.finish_send_at }}</td>
             <td>{{ mailing.status }}</td>
             <td>{{ mailing.message }}</td>
-            <td>{{ mailing.recipients }}</td>
+            <td>
+
+                {% for recipient in mailing.recipients.all %}
+                {{ recipient.email }}<br>
+                {% endfor %}
+
+
+
+            </td>
             <td class="text-end">
+                <a class="btn btn-outline-primary" href="{% url 'mailing:mailing_update' mailing.pk%}">Разослать</a>
                 <a class="btn btn-outline-primary" href="{% url 'mailing:mailing_update' mailing.pk%}">Изменить</a>
                 <a class="btn btn-outline-danger" href="{% url 'mailing:mailing_delete' mailing.pk%}">Удалить</a>
             </td>

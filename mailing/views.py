@@ -59,6 +59,10 @@ class MessageDeleteView(DeleteView):
 class MailingListView(ListView):
     model = Mailing
 
+    def get_queryset(self):
+        queryset = Mailing.objects.prefetch_related('recipients')
+        return queryset
+
 
 class MailingCreateView(CreateView):
     model = Mailing
