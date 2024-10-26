@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.core.mail import send_mail
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, ListView, DetailView
-from django.views.generic import CreateView,DeleteView,UpdateView
+from django.views.generic import TemplateView, ListView, DetailView, View
+from django.views.generic.edit import CreateView,DeleteView,UpdateView
 from mailing.models import Recipient, Message, Mailing
 from mailing.forms import RecipientForm, MessageForm, MailingForm
 
@@ -79,3 +81,31 @@ class MailingUpdateView(UpdateView):
 class MailingDeleteView(DeleteView):
     model = Mailing
     success_url = reverse_lazy("mailing:mailing_list")
+
+
+class MailingDetailView(DetailView):
+    model = Mailing
+
+    def get_queryset(self):
+        queryset = Mailing.objects.prefetch_related('recipients')
+        return queryset
+
+    def post(self, request, *args, **kwargs):
+
+        self.object = self.get_object()
+        # Получите данные, которые хотите отправить
+        subject = self.object.message
+        message = self.object.message.message
+
+        print(subject)
+        print(message)
+        from_email = "barchatovkirill@mail.ru"
+        recipient_list = [[recipient.email] for recipient in self.object.recipients.all()]  # Укажите адреса получателей
+        print(recipient_list)
+
+        # Отправка письма
+        for recipient in recipient_list:
+            send_mail(subject, message, from_email, recipient)
+
+        # Перенаправление после отправки письма
+        return redirect('mailing:mailing_list')  # Укажите нужный URL для перенаправления
