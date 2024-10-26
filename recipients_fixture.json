@@ -1,0 +1,92 @@
+[
+{
+    "model": "mailing.recipient",
+    "pk": 5,
+    "fields": {
+        "email": "skypro1@mailinator.com",
+        "full_name": "Скайпро Скайпрошович",
+        "comment": "skypro1@mailinator.com.\r\nСкайпро Скайпрошович.\r\nТестовый ящик: после пробной рассылки зайди на mailinator.com и вбей название ящика."
+    }
+},
+{
+    "model": "mailing.recipient",
+    "pk": 6,
+    "fields": {
+        "email": "skypro2@mailinator.com",
+        "full_name": "Скайпро Скайпрошович",
+        "comment": "skypro2@mailinator.com.\r\nСкайпро Скайпрошович.\r\nТестовый ящик: после пробной рассылки зайди на mailinator.com и вбей название ящика."
+    }
+},
+{
+    "model": "mailing.recipient",
+    "pk": 7,
+    "fields": {
+        "email": "skypro3@mailinator.com",
+        "full_name": "Скайпро Скайпрошович",
+        "comment": "skypro3@mailinator.com. Скайпро Скайпрошович. Тестовый ящик: после пробной рассылки зайди на mailinator.com и вбей название ящика."
+    }
+},
+{
+    "model": "mailing.recipient",
+    "pk": 8,
+    "fields": {
+        "email": "skypro4@mailinatorrrr.ccccom",
+        "full_name": "Скайпро Скайпрошович",
+        "comment": "Плохой ящик для неудачной рассылки skypro4@mailinator.com. Скайпро Скайпрошович. Тестовый ящик: после пробной рассылки зайди на mailinator.com и вбей название ящика."
+    }
+},
+{
+    "model": "mailing.recipient",
+    "pk": 9,
+    "fields": {
+        "email": "skypro5@mailinator.com",
+        "full_name": "Скайпро Скайпрошович",
+        "comment": "skypro5@mailinator.com. Скайпро Скайпрошович. Тестовый ящик: после пробной рассылки зайди на mailinator.com и вбей название ящика."
+    }
+},
+{
+    "model": "mailing.recipient",
+    "pk": 10,
+    "fields": {
+        "email": "skypro6@mailinator.com",
+        "full_name": "Скайпро Скайпрошович",
+        "comment": "skypro6@mailinator.com. Скайпро Скайпрошович. Тестовый ящик: после пробной рассылки зайди на mailinator.com и вбей название ящика."
+    }
+},
+{
+    "model": "mailing.recipient",
+    "pk": 11,
+    "fields": {
+        "email": "skypro7@mailinator.com",
+        "full_name": "Скайпро Скайпрошович",
+        "comment": "skypro7@mailinator.com. Скайпро Скайпрошович. Тестовый ящик: после пробной рассылки зайди на mailinator.com и вбей название ящика."
+    }
+},
+{
+    "model": "mailing.recipient",
+    "pk": 12,
+    "fields": {
+        "email": "skypro10@linator.commmm",
+        "full_name": "Скайпро Скайпрошович",
+        "comment": "Плохой ящик для неудачной рассылки skypro10@linator.commmm. Скайпро Скайпрошович. Тестовый ящик: после пробной рассылки зайди на mailinator.com и вбей название ящика."
+    }
+},
+{
+    "model": "mailing.recipient",
+    "pk": 13,
+    "fields": {
+        "email": "skypro8@mailinator.com",
+        "full_name": "Скайпро Скайпрошович",
+        "comment": "skypro8@mailinator.com. Скайпро Скайпрошович. Тестовый ящик: после пробной рассылки зайди на mailinator.com и вбей название ящика."
+    }
+},
+{
+    "model": "mailing.recipient",
+    "pk": 14,
+    "fields": {
+        "email": "skypro9@mailinator.com",
+        "full_name": "Скайпро Скайпрошович",
+        "comment": "skypro9@mailinator.com. Скайпро Скайпрошович. Тестовый ящик: после пробной рассылки зайди на mailinator.com и вбей название ящика."
+    }
+}
+]
