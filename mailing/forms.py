@@ -1,12 +1,14 @@
 from django import forms
-from .models import Mailing, Recipient, Message, MailingAttempt
+
+from .models import Mailing, Message, Recipient
+
 
 class MailingForm(forms.ModelForm):
     class Meta:
         model = Mailing
-        fields = '__all__'
+        fields = "__all__"
         widgets = {
-            'recipients': forms.CheckboxSelectMultiple(),
+            "recipients": forms.CheckboxSelectMultiple(),
         }
 
 

@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Recipient, Message, Mailing, MailingAttempt
+
 from .forms import MailingForm
+from .models import Mailing, MailingAttempt, Message, Recipient
 
 # Register your models here.
 
@@ -9,6 +10,7 @@ admin.site.register(Recipient)
 admin.site.register(Message)
 # admin.site.register(Mailing)
 admin.site.register(MailingAttempt)
+
 
 # Кастомное отображение в админке
 @admin.register(Mailing)
@@ -22,7 +24,7 @@ class MailingAdmin(admin.ModelAdmin):
         "finish_send_at",
         "status",
         "message",
-        "get_recipients", # специальное отображение ManyToManyField
+        "get_recipients",  # специальное отображение ManyToManyField
     )  # вывод колонок
 
     # search_fields = (
@@ -40,4 +42,4 @@ class MailingAdmin(admin.ModelAdmin):
     def get_recipients(self, obj):
         return ", ".join([recipient.email for recipient in obj.recipients.all()])
 
-    get_recipients.short_description = "recipients" # Название колонки в админке
+    get_recipients.short_description = "recipients"  # Название колонки в админке

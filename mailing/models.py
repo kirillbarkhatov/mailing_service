@@ -2,6 +2,7 @@ from datetime import datetime
 
 from django.db import models
 
+
 # Create your models here.
 class Recipient(models.Model):
     """Модель «Получатель рассылки»"""
@@ -17,11 +18,7 @@ class Recipient(models.Model):
         verbose_name="ФИО",
     )
 
-    comment = models.TextField(
-        null=True,
-        blank=True,
-        verbose_name="Комментарий"
-    )
+    comment = models.TextField(null=True, blank=True, verbose_name="Комментарий")
 
     def __str__(self):
         return self.email
@@ -42,9 +39,7 @@ class Message(models.Model):
         verbose_name="Тема письма",
     )
 
-    message = models.TextField(
-        verbose_name="Тело письма"
-    )
+    message = models.TextField(verbose_name="Тело письма")
 
     def __str__(self):
         return self.title
@@ -82,10 +77,7 @@ class Mailing(models.Model):
     )
 
     status = models.CharField(
-        max_length=9,
-        choices=STATUS_CHOICES,
-        default=CREATED,
-        verbose_name="Статус"
+        max_length=9, choices=STATUS_CHOICES, default=CREATED, verbose_name="Статус"
     )
 
     message = models.ForeignKey(
