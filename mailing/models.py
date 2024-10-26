@@ -104,7 +104,11 @@ class Mailing(models.Model):
     )
 
     def __str__(self):
-        return f"{self.pk} - {self.first_send_at} - {self.finish_send_at}"
+        # Получаем тему письма
+        subject = self.message.title if self.message else "Нет темы"
+        # Получаем количество получателей
+        recipient_count = self.recipients.count()
+        return f"Рассылка № {self.pk}, Тема письма: {subject}, Количество получателей: {recipient_count}"
 
     class Meta:
         verbose_name = "Рассылка"

@@ -23,6 +23,7 @@ urlpatterns = [
     path("mailing/<int:pk>/update", views.MailingUpdateView.as_view(), name="mailing_update"),
     path("mailing/<int:pk>/delete", views.MailingDeleteView.as_view(), name="mailing_delete"),
     path("mailing/<int:pk>", views.MailingDetailView.as_view(), name="mailing_detail"),
+    path("mailingattempt_list", views.MailingAttemptListView.as_view(), name="mailingattempt_list"),
     # path("contacts/", views.ContactsView.as_view(), name="contacts"),
     # path("<int:pk>", views.BlogEntryDetailView.as_view(), name="blogentry_detail"),
     # path("create", views.BlogEntryCreateView.as_view(), name="blogentry_create"),

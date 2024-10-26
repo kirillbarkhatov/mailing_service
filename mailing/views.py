@@ -1,10 +1,13 @@
+from datetime import datetime
+
 from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
+from django.utils import timezone
 from django.views.generic import TemplateView, ListView, DetailView, View
 from django.views.generic.edit import CreateView,DeleteView,UpdateView
-from mailing.models import Recipient, Message, Mailing
+from mailing.models import Recipient, Message, Mailing, MailingAttempt
 from mailing.forms import RecipientForm, MessageForm, MailingForm
 
 # Create your views here.
@@ -97,15 +100,32 @@ class MailingDetailView(DetailView):
         subject = self.object.message
         message = self.object.message.message
 
-        print(subject)
-        print(message)
         from_email = "barchatovkirill@mail.ru"
-        recipient_list = [[recipient.email] for recipient in self.object.recipients.all()]  # Укажите адреса получателей
-        print(recipient_list)
+        recipient_list = [recipient.email for recipient in self.object.recipients.all()]  # Укажите адреса получателей
 
         # Отправка письма
+        # responses = {}
+
         for recipient in recipient_list:
-            send_mail(subject, message, from_email, recipient)
+            try:
+                send_mail(subject, message, from_email, [recipient])
+                response = f"{recipient}: Успешно отправлено"
+                MailingAttempt.objects.create(attempted_at=timezone.now(), status="success", mail_server_response=response, mailing= self.object)
+                # responses[recipient] = "Успешно отправлено"
+            except Exception as e:
+                response = f"{recipient}: Ошибка: {str(e)}"
+                # responses[recipient] = f"Ошибка: {str(e)}"
+                MailingAttempt.objects.create(attempted_at=datetime.now(), status="failure",
+                                              mail_server_response=response, mailing=self.object)
+
+        # Вывод ответов для проверки
+        # for recipient, response in responses.items():
+        #     print(f"{recipient}: {response}")
 
         # Перенаправление после отправки письма
         return redirect('mailing:mailing_list')  # Укажите нужный URL для перенаправления
+
+
+# Контроллер для модели "Попытка рассылки"
+class MailingAttemptListView(ListView):
+    model = MailingAttempt
