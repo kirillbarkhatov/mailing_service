@@ -1,0 +1,90 @@
+<!-- registration/login.html -->
+{% extends "mailing/base.html" %}
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row text-start">
+
+
+        <div class="col-12">
+            <div class="card mb-4 box-shadow">
+
+                <div class="card-body">
+                    <h2>Вход</h2>
+
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-outline-primary">Войти</button>
+
+
+                </div>
+                <div class="card-body">
+
+                    <h3>Если после миграций вы выполнили команды "add_test_data" и "csu", вам доступны следующие учетные записи</h3>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+
+                            <th>Почта</th>
+                            <th>Пароль</th>
+                            <th>Группа</th>
+                            <th>Описание</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+
+                        <tr>
+                            <th>admin@admin.ru</th>
+                            <td>123qwe456rty</td>
+                            <td>superuser</td>
+                            <td>Для админки</td>
+                        </tr>
+
+                        <tr>
+                            <th>moderator@moderator.ru</th>
+                            <td>123qwe456rty</td>
+                            <td>Модератор продуктов</td>
+                            <td>Может удалять и снимать с публикации продукты</td>
+                        </tr>
+
+                        <tr>
+                            <th>content@manager.ru</th>
+                            <td>123qwe456rty</td>
+                            <td>Контент-менеджер</td>
+                            <td>Может видеть все записи в блоге, публиковать и снимать их с публикации</td>
+                        </tr>
+
+                        <tr>
+                            <th>test1@test1.ru</th>
+                            <td>123qwe456rty</td>
+                            <td></td>
+                            <td>Владелец всех смартфонов из фикстур и автор всех записей блога из фикстур</td>
+                        </tr>
+
+                        <tr>
+                            <th>test2@test2.ru</th>
+                            <td>123qwe456rty</td>
+                            <td></td>
+                            <td>Владелец всех продуктов, кроме смартфонов из фикстур</td>
+                        </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}
