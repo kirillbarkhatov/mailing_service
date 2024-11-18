@@ -108,6 +108,9 @@ class Mailing(models.Model):
         ordering = [
             "id",
         ]
+        permissions = [
+            ("can_cancel_mailing", "Can cancel mailing"),
+        ]
 
 
 class MailingAttempt(models.Model):
