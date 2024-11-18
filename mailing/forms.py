@@ -7,6 +7,7 @@ class MailingForm(forms.ModelForm):
     class Meta:
         model = Mailing
         fields = "__all__"
+        exclude = ["owner", ]
         widgets = {
             "recipients": forms.CheckboxSelectMultiple(),
         }
@@ -20,6 +21,7 @@ class RecipientForm(forms.ModelForm):
         model = Recipient
         # Включаем все поля с модели в форму
         fields = "__all__"
+        exclude = ["owner", ]
 
 
 class MessageForm(forms.ModelForm):
@@ -30,3 +32,4 @@ class MessageForm(forms.ModelForm):
         model = Message
         # Включаем все поля с модели в форму
         fields = "__all__"
+        exclude = ["owner", ]
