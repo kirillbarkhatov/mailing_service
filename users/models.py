@@ -9,6 +9,7 @@ class CustomUser(AbstractUser):
     username = None
 
     email = models.EmailField(unique=True, verbose_name="Электронная почта")
+    password = models.CharField(max_length=128, verbose_name="Пароль")
 
     # токен для подтверждения почты
     token = models.CharField(max_length=100, blank=True, null=True, verbose_name="Токен")

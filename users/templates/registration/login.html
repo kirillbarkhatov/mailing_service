@@ -1,5 +1,6 @@
 <!-- registration/login.html -->
 {% extends "mailing/base.html" %}
+{% load crispy_forms_tags %}
 {% block title %}Вход{% endblock %}
 
 {% block content %}
@@ -7,25 +8,18 @@
 
 <div class="container">
     <div class="row d-flex justify-content-center text-start">
-
-
-        <div class="col-6">
-            <div class="card mt-4 mb-4 box-shadow">
-
+        <div class="col-lg-6 col-md-8 col-sm-10">
+            <div class="card mt-4 mb-4 shadow-sm">
                 <div class="card-body">
-                    <h2>Вход</h2>
-
+                    <h2 class="text-center mb-4">Вход</h2>
                     <form method="post">
                         {% csrf_token %}
-                        {{ form.as_p }}
-                        <button type="submit" class="btn btn-outline-primary">Войти</button>
-
+                        {{ form|crispy }}
+                        <button type="submit" class="btn btn-primary w-100">Войти</button>
+                    </form>
                 </div>
-
             </div>
         </div>
-
-
     </div>
 </div>
 
