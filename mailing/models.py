@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from django.db import models
+from users.models import CustomUser
 
 
 # Create your models here.
@@ -16,6 +17,15 @@ class Recipient(models.Model):
     full_name = models.CharField(
         max_length=200,
         verbose_name="ФИО",
+    )
+
+    owner = models.ForeignKey(
+        CustomUser,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="recipients_owner",
+        verbose_name="Владелец",
     )
 
     comment = models.TextField(null=True, blank=True, verbose_name="Комментарий")
@@ -40,6 +50,15 @@ class Message(models.Model):
     )
 
     message = models.TextField(verbose_name="Тело письма")
+
+    owner = models.ForeignKey(
+        CustomUser,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="massages_owner",
+        verbose_name="Владелец",
+    )
 
     def __str__(self):
         return self.title
@@ -93,6 +112,15 @@ class Mailing(models.Model):
         Recipient,
         related_name="mailing",
         verbose_name="Получатели",
+    )
+
+    owner = models.ForeignKey(
+        CustomUser,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="mailing_owner",
+        verbose_name="Владелец",
     )
 
     def __str__(self):
