@@ -77,7 +77,7 @@
                     {% csrf_token %}
                     <button type="submit" class="nav-link d-flex align-items-center gap-2">
                         <svg class="bi">
-                            <use xlink:href="/static/svg/icons-menu.svg#door-closed"/>
+                            <use xlink:href="/static/svg/icons-login.svg#door-closed"/>
                         </svg>
                         Выход
                     </button>
@@ -89,7 +89,7 @@
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" href="{% url 'users:login' %}">
                         <svg class="bi">
-                            <use xlink:href="/static/svg/icons-menu.svg#door-open"/>
+                            <use xlink:href="/static/svg/icons-login.svg#door-open"/>
                         </svg>
                         Войти
                     </a>
@@ -97,7 +97,7 @@
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" href="{% url 'users:register' %}">
                         <svg class="bi">
-                            <use xlink:href="/static/svg/icons-menu.svg#person-plus"/>
+                            <use xlink:href="/static/svg/icons-login.svg#person-plus"/>
                         </svg>
                         Регистрация
                     </a>
