@@ -40,6 +40,13 @@ class IndexView(LoginRequiredMixin, TemplateView):
 class RecipientListView(LoginRequiredMixin, ListView):
     model = Recipient
 
+    def get_queryset(self):
+        # фильтр данных по пользователю
+        user = self.request.user
+        if user.groups.filter(name="Менеджер").exists():
+            return Recipient.objects.all()
+        return Recipient.objects.filter(owner=user.id)
+
 
 class RecipientCreateView(LoginRequiredMixin, CreateView):
     model = Recipient
@@ -68,6 +75,13 @@ class RecipientDeleteView(LoginRequiredMixin, DeleteView):
 # CRUD для модели "Сообщение"
 class MessageListView(LoginRequiredMixin, ListView):
     model = Message
+
+    def get_queryset(self):
+        # фильтр данных по пользователю
+        user = self.request.user
+        if user.groups.filter(name="Менеджер").exists():
+            return Message.objects.all()
+        return Message.objects.filter(owner=user.id)
 
 
 class MessageCreateView(LoginRequiredMixin, CreateView):
@@ -99,8 +113,13 @@ class MailingListView(LoginRequiredMixin, ListView):
     model = Mailing
 
     def get_queryset(self):
-        queryset = Mailing.objects.prefetch_related("recipients")
-        return queryset
+
+        # фильтр данных по пользователю
+        user = self.request.user
+        if user.groups.filter(name="Менеджер").exists():
+            return Mailing.objects.prefetch_related("recipients")
+        return Mailing.objects.filter(owner=user.id).prefetch_related("recipients")
+
 
 
 class MailingCreateView(LoginRequiredMixin, CreateView):
