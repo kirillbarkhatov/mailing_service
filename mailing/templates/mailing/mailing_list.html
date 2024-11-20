@@ -30,7 +30,16 @@
             <td>{{ mailing.id }}</td>
             <td>{{ mailing.first_send_at }}</td>
             <td>{{ mailing.finish_send_at }}</td>
-            <td>{{ mailing.status }}</td>
+            <td>{{ mailing.status }}
+            {% if mailing.owner == user or is_manager %}
+                {% if mailing.status != "completed" %}
+                <form action="{% url 'mailing:mailing_stop' mailing.pk %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-danger btn-sm">Завершить/отключить</button>
+                </form>
+                {% endif %}
+                {% endif %}
+            </td>
             <td>{{ mailing.message }}</td>
             <td>
 
@@ -39,17 +48,18 @@
                 {% endfor %}
 
 
-
             </td>
-            {% if mailing.owner == user %}
+
             <td class="text-end">
+                {% if mailing.owner == user %}
+                {% if mailing.status != "completed" %}
                 <a class="btn btn-outline-primary" href="{% url 'mailing:mailing_detail' mailing.pk%}">Разослать</a>
+                {% endif %}
                 <a class="btn btn-outline-primary" href="{% url 'mailing:mailing_update' mailing.pk%}">Изменить</a>
                 <a class="btn btn-outline-danger" href="{% url 'mailing:mailing_delete' mailing.pk%}">Удалить</a>
+                {% endif %}
             </td>
-            {% else %}
-            <td class="text-end" style="width: 20vh;"></td>
-            {% endif %}
+
         </tr>
         {% endfor %}
         </tbody>

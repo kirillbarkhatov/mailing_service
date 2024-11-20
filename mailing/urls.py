@@ -44,6 +44,11 @@ urlpatterns = [
         name="mailing_update",
     ),
     path(
+        "mailing/<int:pk>/stop",
+        views.MailingStopView.as_view(),
+        name="mailing_stop",
+    ),
+    path(
         "mailing/<int:pk>/delete",
         views.MailingDeleteView.as_view(),
         name="mailing_delete",

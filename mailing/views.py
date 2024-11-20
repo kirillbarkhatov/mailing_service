@@ -1,12 +1,13 @@
 from datetime import datetime
 
+from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.mail import send_mail
 from django.http import HttpResponseForbidden
-from django.shortcuts import redirect
+from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.utils import timezone
-from django.views.generic import DetailView, ListView, TemplateView
+from django.views.generic import DetailView, ListView, TemplateView, View
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 from mailing.forms import MailingForm, MessageForm, RecipientForm
@@ -200,6 +201,29 @@ class MailingListView(LoginRequiredMixin, ListView):
         return context
 
 
+class MailingStopView(LoginRequiredMixin, View):
+    def post(self, request, pk):
+        mailing = get_object_or_404(Mailing, pk=pk)
+        user = request.user
+
+        # Проверка, состоит ли пользователь в группе "Менеджер"
+        is_manager = user.groups.filter(
+            name="Менеджер"
+        ).exists()
+
+        if is_manager or user == mailing.owner:
+            # Логика снятия с публикации
+            mailing.status = "completed"
+            mailing.save()
+
+            return redirect("mailing:mailing_list")
+        return HttpResponseForbidden(
+            "У вас нет прав для отключения рассылки"
+        )
+
+
+
+
 class MailingCreateView(LoginRequiredMixin, CreateView):
     model = Mailing
     form_class = MailingForm
@@ -266,7 +290,8 @@ class MailingDetailView(LoginRequiredMixin, DetailView):
         # Получите данные, которые хотите отправить
         subject = self.object.message
         message = self.object.message.message
-
+        self.object.status = "running"
+        self.object.save()
         from_email = "barchatovkirill@mail.ru"
         recipient_list = [
             recipient.email for recipient in self.object.recipients.all()
