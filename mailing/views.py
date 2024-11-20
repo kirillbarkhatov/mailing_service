@@ -19,13 +19,25 @@ class IndexView(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        mailing_attempt = MailingAttempt.objects.all()
+
+        # фильтр данных по пользователю
+        user = self.request.user
+        if user.groups.filter(name="Менеджер").exists():
+            mailing_attempt = MailingAttempt.objects.all()
+            mailing = Mailing.objects.all()
+            recipient = Recipient.objects.all()
+
+        else:
+            mailing_attempt = MailingAttempt.objects.filter(mailing__owner=user.id)
+            mailing = Mailing.objects.filter(owner=user.id)
+            recipient = Recipient.objects.filter(owner=user.id)
+
         attempt_count = mailing_attempt.count()
         attempt_success_count = mailing_attempt.filter(status="success").count()
         attempt_failure_count = mailing_attempt.filter(status="failure").count()
-        mailing_count = Mailing.objects.count()
-        mailing_running_count = Mailing.objects.filter(status="running").count()
-        recipient_count = Recipient.objects.count()
+        mailing_count = mailing.count()
+        mailing_running_count = mailing.filter(status="running").count()
+        recipient_count = recipient.count()
         context["object_list"] = mailing_attempt
         context["attempt_count"] = attempt_count
         context["attempt_success_count"] = attempt_success_count
