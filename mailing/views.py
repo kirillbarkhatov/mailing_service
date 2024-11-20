@@ -134,6 +134,11 @@ class MailingCreateView(LoginRequiredMixin, CreateView):
         mailing.save()
         return super().form_valid(form)
 
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['user'] = self.request.user  # Передаем текущего пользователя
+        return kwargs
+
 
 class MailingUpdateView(LoginRequiredMixin, UpdateView):
     model = Mailing
@@ -202,3 +207,11 @@ class MailingDetailView(LoginRequiredMixin, DetailView):
 # Контроллер для модели "Попытка рассылки"
 class MailingAttemptListView(LoginRequiredMixin, ListView):
     model = MailingAttempt
+
+    def get_queryset(self):
+
+        # фильтр данных по пользователю
+        user = self.request.user
+        if user.groups.filter(name="Менеджер").exists():
+            return MailingAttempt.objects.all()
+        return MailingAttempt.objects.filter(mailing__owner=user.id)
