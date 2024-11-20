@@ -46,6 +46,13 @@ class RecipientCreateView(LoginRequiredMixin, CreateView):
     form_class = RecipientForm
     success_url = reverse_lazy("mailing:recipient_list")
 
+    def form_valid(self, form):
+        recipient = form.save()
+        user = self.request.user
+        recipient.owner = user
+        recipient.save()
+        return super().form_valid(form)
+
 
 class RecipientUpdateView(LoginRequiredMixin, UpdateView):
     model = Recipient
@@ -67,6 +74,13 @@ class MessageCreateView(LoginRequiredMixin, CreateView):
     model = Message
     form_class = MessageForm
     success_url = reverse_lazy("mailing:message_list")
+
+    def form_valid(self, form):
+        message = form.save()
+        user = self.request.user
+        message.owner = user
+        message.save()
+        return super().form_valid(form)
 
 
 class MessageUpdateView(LoginRequiredMixin, UpdateView):
@@ -93,6 +107,13 @@ class MailingCreateView(LoginRequiredMixin, CreateView):
     model = Mailing
     form_class = MailingForm
     success_url = reverse_lazy("mailing:mailing_list")
+
+    def form_valid(self, form):
+        mailing = form.save()
+        user = self.request.user
+        mailing.owner = user
+        mailing.save()
+        return super().form_valid(form)
 
 
 class MailingUpdateView(LoginRequiredMixin, UpdateView):
