@@ -12,8 +12,6 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from mailing.forms import MailingForm, MessageForm, RecipientForm
 from mailing.models import Mailing, MailingAttempt, Message, Recipient
 
-# Create your views here.
-
 
 class IndexView(LoginRequiredMixin, TemplateView):
     template_name = "mailing/index.html"

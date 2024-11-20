@@ -68,15 +68,17 @@
 
             <ul class="nav flex-column mb-auto">
 
-                {% if user.is_authenticated %}
+                {% if perms.users.can_block_user %}
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
+                    <a class="nav-link d-flex align-items-center gap-2" href="{% url 'users:users' %}">
                         <svg class="bi">
-                            <use xlink:href="/static/svg/icons-menu.svg#gear-wide-connected"/>
+                            <use xlink:href="/static/svg/icons-menu.svg#people"/>
                         </svg>
-                        Настройки
+                        Пользователи системы
                     </a>
                 </li>
+                {% endif %}
+                {% if user.is_authenticated %}
                 <li class="nav-item">
                     <form method="post" action="{% url 'users:logout' %}">
                     {% csrf_token %}
