@@ -49,14 +49,14 @@ class Command(BaseCommand):
 
         other_owner = CustomUser.objects.get(email="test2@test2.ru")
         Recipient.objects.create(
-            email="qwerty@asdf.ru",
-            full_name="qwerty asdf",
+            email="qwerty@asdfg.ru",
+            full_name="qwerty asdfg",
             comment="Тестовый получатель для пользователя test2@test2.ru",
             owner=other_owner,
         )
         Message.objects.create(
-            title="Смотри! Это тема сообщения!",
-            message="Смотри! Это само сообщение!",
+            title="Смотри! Это тема сообщения! test2@test2.ru",
+            message="Смотри! Это само сообщение! test2@test2.ru",
             owner=other_owner,
         )
 

@@ -1,0 +1,50 @@
+[
+{
+    "model": "mailing.message",
+    "pk": 1,
+    "fields": {
+        "title": "Тест1",
+        "message": "Тестовое сообщение 1"
+    }
+},
+{
+    "model": "mailing.message",
+    "pk": 2,
+    "fields": {
+        "title": "Тест 2",
+        "message": "Тестовое сообщение 2"
+    }
+},
+{
+    "model": "mailing.message",
+    "pk": 3,
+    "fields": {
+        "title": "Очень длинное письмо",
+        "message": "Lorem ipsum odor amet, consectetuer adipiscing elit. Risus torquent ante elementum dolor iaculis facilisi? Eget neque cursus ultrices ligula vestibulum vitae. Fermentum consequat et fermentum dis phasellus diam. Nullam tristique risus natoque lectus imperdiet congue nibh sit interdum. Ligula leo habitant aliquam himenaeos per semper feugiat. Porta dolor imperdiet tellus odio at nulla dictumst pretium quis. Class lacinia inceptos id arcu tempor. Class tempor inceptos rutrum penatibus feugiat torquent. Mi malesuada id condimentum dui posuere curae ante.\r\n\r\nNisi vestibulum quam duis eu commodo interdum. Convallis morbi lectus hac donec consectetur morbi cursus mauris convallis. Fames ligula arcu nec torquent nulla? Ad finibus tristique; egestas elementum at imperdiet. Tempor fermentum nam vel vulputate pretium vitae fusce. Lacus et metus vitae hendrerit mollis est rhoncus. Per auctor suspendisse platea porta erat varius dapibus imperdiet ultricies. Molestie rhoncus libero donec interdum ullamcorper at arcu sagittis sodales? Porttitor egestas facilisi habitant; faucibus arcu at. Turpis libero eleifend dolor metus nascetur sodales.\r\n\r\nEgestas at finibus blandit tincidunt dolor, elementum suspendisse sapien ridiculus. Acurae ipsum semper ridiculus mus vel commodo. Gravida metus conubia; at sollicitudin neque vitae venenatis. Quis odio nec quam habitasse habitant eros a aliquam. Faucibus praesent ante senectus suscipit vestibulum fermentum. Tempor sollicitudin sodales leo efficitur ad interdum. Nam vehicula dictum consectetur eros cubilia lobortis duis venenatis. Rhoncus euismod montes id vivamus libero cursus!\r\n\r\nHabitasse tempus tellus urna inceptos nostra suspendisse. Quam neque molestie tempor maximus, augue vestibulum penatibus. Nisl lacus vel elementum himenaeos velit tortor proin. Odio himenaeos torquent urna primis metus sociosqu. Est porttitor elit amet conubia; tristique ad varius. Platea felis lacus potenti egestas velit hendrerit diam condimentum. Sit porttitor pellentesque ex duis tellus, nisl volutpat penatibus. Nibh litora hac inceptos erat vestibulum faucibus habitasse integer? Netus ultrices leo etiam massa nunc nunc suspendisse aptent. Vel magna auctor fermentum tincidunt pharetra torquent efficitur.\r\n\r\nFames auctor nec laoreet parturient ante mauris cursus. Tempus curae tortor, sociosqu pretium primis fusce porta nisl. Ridiculus convallis ipsum facilisi commodo vestibulum congue habitant pretium. Vel sed nisl id volutpat, diam dis. Scelerisque iaculis viverra taciti augue at nec. Malesuada ante tempor viverra, ante condimentum nisi. Class euismod velit egestas lacus conubia felis maecenas metus maecenas. Himenaeos dui natoque dis; maximus dui iaculis? Nunc taciti luctus suscipit dictum montes."
+    }
+},
+{
+    "model": "mailing.message",
+    "pk": 5,
+    "fields": {
+        "title": "12",
+        "message": "12"
+    }
+},
+{
+    "model": "mailing.message",
+    "pk": 6,
+    "fields": {
+        "title": "Тема 3",
+        "message": "Сообщение 3"
+    }
+},
+{
+    "model": "mailing.message",
+    "pk": 7,
+    "fields": {
+        "title": "Тема 4",
+        "message": "Сообщение 4"
+    }
+}
+]
