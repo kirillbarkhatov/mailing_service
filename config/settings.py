@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "users",
     'crispy_forms',
     'crispy_bootstrap5',
+    'django_apscheduler',
 ]
 
 MIDDLEWARE = [
@@ -167,3 +168,29 @@ if CACHE_ENABLED:
         }
     }
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',  # Путь к файлу логов
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],  # Запись логов в консоль и файл
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'apscheduler': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}

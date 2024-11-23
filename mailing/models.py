@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from django.db import models
 from users.models import CustomUser
@@ -91,7 +91,7 @@ class Mailing(models.Model):
     )
 
     finish_send_at = models.DateTimeField(
-        default=datetime.now(),
+        default=datetime.now() + timedelta(days=1),
         verbose_name="Дата и время окончания отправки",
     )
 
