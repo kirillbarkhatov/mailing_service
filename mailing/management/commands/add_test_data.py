@@ -1,6 +1,5 @@
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
-from pygments.styles.dracula import comment
 
 from mailing.models import Mailing, MailingAttempt, Message, Recipient
 from users.models import CustomUser
@@ -60,7 +59,6 @@ class Command(BaseCommand):
             message="Смотри! Это само сообщение!",
             owner=other_owner,
         )
-
 
         self.stdout.write(
             self.style.SUCCESS(

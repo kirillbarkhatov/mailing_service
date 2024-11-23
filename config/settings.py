@@ -15,7 +15,6 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-
 load_dotenv(override=True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -45,9 +44,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "mailing",
     "users",
-    'crispy_forms',
-    'crispy_bootstrap5',
-    'django_apscheduler',
+    "crispy_forms",
+    "crispy_bootstrap5",
+    "django_apscheduler",
 ]
 
 MIDDLEWARE = [
@@ -169,28 +168,24 @@ if CACHE_ENABLED:
     }
 
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
         },
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': 'debug.log',  # Путь к файлу логов
+        "file": {
+            "level": "DEBUG",
+            "class": "logging.FileHandler",
+            "filename": "debug.log",  # Путь к файлу логов
         },
     },
-    'loggers': {
-        'django': {
-            'handlers': ['console', 'file'],  # Запись логов в консоль и файл
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-        'apscheduler': {
-            'handlers': ['console', 'file'],
-            'level': 'INFO',
-            'propagate': False,
+    "loggers": {
+        "mailing.management.commands.runapscheduler": {
+            "handlers": ["console", "file"],
+            "level": "DEBUG",
+            "propagate": False,
         },
     },
 }

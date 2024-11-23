@@ -19,7 +19,7 @@
             <th scope="col">#</th>
             <th scope="col">Дата и время первой отправки</th>
             <th scope="col">Дата и время окончания отправки</th>
-            <th scope="col">Статус</th>
+            <th scope="col">Статус автоматической рассылки</th>
             <th scope="col">Сообщение</th>
             <th scope="col">Получатели</th>
         </tr>
@@ -52,9 +52,9 @@
 
             <td class="text-end">
                 {% if mailing.owner == user %}
-                {% if mailing.status != "completed" %}
-                <a class="btn btn-outline-primary" href="{% url 'mailing:mailing_detail' mailing.pk%}">Разослать</a>
-                {% endif %}
+
+                <a class="btn btn-outline-primary" href="{% url 'mailing:mailing_detail' mailing.pk%}">Разослать вручную</a>
+
                 <a class="btn btn-outline-primary" href="{% url 'mailing:mailing_update' mailing.pk%}">Изменить</a>
                 <a class="btn btn-outline-danger" href="{% url 'mailing:mailing_delete' mailing.pk%}">Удалить</a>
                 {% endif %}

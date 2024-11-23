@@ -11,7 +11,11 @@ app_name = MailingConfig.name
 
 urlpatterns = [
     path("", views.IndexView.as_view(), name="index"),
-    path("recipient_list", cache_page(5)(views.RecipientListView.as_view()), name="recipient_list"),
+    path(
+        "recipient_list",
+        cache_page(5)(views.RecipientListView.as_view()),
+        name="recipient_list",
+    ),
     path(
         "recipient/create", views.RecipientCreateView.as_view(), name="recipient_create"
     ),
@@ -25,7 +29,11 @@ urlpatterns = [
         views.RecipientDeleteView.as_view(),
         name="recipient_delete",
     ),
-    path("message_list", cache_page(5)(views.MessageListView.as_view()), name="message_list"),
+    path(
+        "message_list",
+        cache_page(5)(views.MessageListView.as_view()),
+        name="message_list",
+    ),
     path("message/create", views.MessageCreateView.as_view(), name="message_create"),
     path(
         "message/<int:pk>/update",
@@ -37,7 +45,11 @@ urlpatterns = [
         views.MessageDeleteView.as_view(),
         name="message_delete",
     ),
-    path("mailing_list", cache_page(5)(views.MailingListView.as_view()), name="mailing_list"),
+    path(
+        "mailing_list",
+        cache_page(5)(views.MailingListView.as_view()),
+        name="mailing_list",
+    ),
     path("mailing/create", views.MailingCreateView.as_view(), name="mailing_create"),
     path(
         "mailing/<int:pk>/update",

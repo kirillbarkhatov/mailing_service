@@ -1,10 +1,9 @@
 from datetime import datetime
 
-from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.mail import send_mail
 from django.http import HttpResponseForbidden
-from django.shortcuts import redirect, get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.utils import timezone
 from django.views.generic import DetailView, ListView, TemplateView, View
@@ -43,9 +42,7 @@ class RecipientListView(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
 
         # Проверка, состоит ли пользователь в группе "Менеджер"
-        is_manager = self.request.user.groups.filter(
-            name="Менеджер"
-        ).exists()
+        is_manager = self.request.user.groups.filter(name="Менеджер").exists()
 
         # Добавляем в контекст информацию, что пользователь является модератором
         context["is_manager"] = is_manager
@@ -76,7 +73,9 @@ class RecipientUpdateView(LoginRequiredMixin, UpdateView):
         # Проверяем, является ли текущий пользователь владельцем объекта
         if obj.owner == self.request.user:
             return super().dispatch(request, *args, **kwargs)
-        return HttpResponseForbidden("Вы не можете просматривать/изменять/удалять этот объект.")
+        return HttpResponseForbidden(
+            "Вы не можете просматривать/изменять/удалять этот объект."
+        )
 
 
 class RecipientDeleteView(LoginRequiredMixin, DeleteView):
@@ -89,7 +88,9 @@ class RecipientDeleteView(LoginRequiredMixin, DeleteView):
         # Проверяем, является ли текущий пользователь владельцем объекта
         if obj.owner == self.request.user:
             return super().dispatch(request, *args, **kwargs)
-        return HttpResponseForbidden("Вы не можете просматривать/изменять/удалять этот объект.")
+        return HttpResponseForbidden(
+            "Вы не можете просматривать/изменять/удалять этот объект."
+        )
 
 
 # CRUD для модели "Сообщение"
@@ -107,9 +108,7 @@ class MessageListView(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
 
         # Проверка, состоит ли пользователь в группе "Менеджер"
-        is_manager = self.request.user.groups.filter(
-            name="Менеджер"
-        ).exists()
+        is_manager = self.request.user.groups.filter(name="Менеджер").exists()
 
         # Добавляем в контекст информацию, что пользователь является модератором
         context["is_manager"] = is_manager
@@ -140,7 +139,9 @@ class MessageUpdateView(LoginRequiredMixin, UpdateView):
         # Проверяем, является ли текущий пользователь владельцем объекта
         if obj.owner == self.request.user:
             return super().dispatch(request, *args, **kwargs)
-        return HttpResponseForbidden("Вы не можете просматривать/изменять/удалять этот объект.")
+        return HttpResponseForbidden(
+            "Вы не можете просматривать/изменять/удалять этот объект."
+        )
 
 
 class MessageDeleteView(LoginRequiredMixin, DeleteView):
@@ -153,7 +154,9 @@ class MessageDeleteView(LoginRequiredMixin, DeleteView):
         # Проверяем, является ли текущий пользователь владельцем объекта
         if obj.owner == self.request.user:
             return super().dispatch(request, *args, **kwargs)
-        return HttpResponseForbidden("Вы не можете просматривать/изменять/удалять этот объект.")
+        return HttpResponseForbidden(
+            "Вы не можете просматривать/изменять/удалять этот объект."
+        )
 
 
 # CRUD для модели "Рассылки"
@@ -172,9 +175,7 @@ class MailingListView(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
 
         # Проверка, состоит ли пользователь в группе "Менеджер"
-        is_manager = self.request.user.groups.filter(
-            name="Менеджер"
-        ).exists()
+        is_manager = self.request.user.groups.filter(name="Менеджер").exists()
 
         # Добавляем в контекст информацию, что пользователь является модератором
         context["is_manager"] = is_manager
@@ -187,9 +188,7 @@ class MailingStopView(LoginRequiredMixin, View):
         user = request.user
 
         # Проверка, состоит ли пользователь в группе "Менеджер"
-        is_manager = user.groups.filter(
-            name="Менеджер"
-        ).exists()
+        is_manager = user.groups.filter(name="Менеджер").exists()
 
         if is_manager or user == mailing.owner:
             # Логика снятия с публикации
@@ -197,9 +196,7 @@ class MailingStopView(LoginRequiredMixin, View):
             mailing.save()
 
             return redirect("mailing:mailing_list")
-        return HttpResponseForbidden(
-            "У вас нет прав для отключения рассылки"
-        )
+        return HttpResponseForbidden("У вас нет прав для отключения рассылки")
 
 
 class MailingCreateView(LoginRequiredMixin, CreateView):
@@ -216,7 +213,7 @@ class MailingCreateView(LoginRequiredMixin, CreateView):
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
-        kwargs['user'] = self.request.user  # Передаем текущего пользователя
+        kwargs["user"] = self.request.user  # Передаем текущего пользователя
         return kwargs
 
 
@@ -231,7 +228,9 @@ class MailingUpdateView(LoginRequiredMixin, UpdateView):
         # Проверяем, является ли текущий пользователь владельцем объекта
         if obj.owner == self.request.user:
             return super().dispatch(request, *args, **kwargs)
-        return HttpResponseForbidden("Вы не можете просматривать/изменять/удалять этот объект.")
+        return HttpResponseForbidden(
+            "Вы не можете просматривать/изменять/удалять этот объект."
+        )
 
 
 class MailingDeleteView(LoginRequiredMixin, DeleteView):
@@ -244,7 +243,9 @@ class MailingDeleteView(LoginRequiredMixin, DeleteView):
         # Проверяем, является ли текущий пользователь владельцем объекта
         if obj.owner == self.request.user:
             return super().dispatch(request, *args, **kwargs)
-        return HttpResponseForbidden("Вы не можете просматривать/изменять/удалять этот объект.")
+        return HttpResponseForbidden(
+            "Вы не можете просматривать/изменять/удалять этот объект."
+        )
 
 
 class MailingDetailView(LoginRequiredMixin, DetailView):
@@ -260,7 +261,9 @@ class MailingDetailView(LoginRequiredMixin, DetailView):
         # Проверяем, является ли текущий пользователь владельцем объекта
         if obj.owner == self.request.user:
             return super().dispatch(request, *args, **kwargs)
-        return HttpResponseForbidden("Вы не можете просматривать/изменять/удалять этот объект.")
+        return HttpResponseForbidden(
+            "Вы не можете просматривать/изменять/удалять этот объект."
+        )
 
     def post(self, request, *args, **kwargs):
 
@@ -268,8 +271,8 @@ class MailingDetailView(LoginRequiredMixin, DetailView):
         # Получите данные, которые хотите отправить
         subject = self.object.message
         message = self.object.message.message
-        self.object.status = "running"
-        self.object.save()
+        # self.object.status = "running"
+        # self.object.save()
         from_email = "barchatovkirill@mail.ru"
         recipient_list = [
             recipient.email for recipient in self.object.recipients.all()

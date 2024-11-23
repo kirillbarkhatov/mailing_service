@@ -18,12 +18,8 @@ class Command(BaseCommand):
             cancel_mailing_permission = Permission.objects.get(
                 codename="can_cancel_mailing"
             )
-            block_user_permission = Permission.objects.get(
-                codename="can_block_user"
-            )
-            group.permissions.add(
-                cancel_mailing_permission, block_user_permission
-            )
+            block_user_permission = Permission.objects.get(codename="can_block_user")
+            group.permissions.add(cancel_mailing_permission, block_user_permission)
             group.save()
             self.stdout.write(
                 self.style.SUCCESS(
@@ -49,7 +45,6 @@ class Command(BaseCommand):
                 f"Успешно создан модератор с email {user.email} с паролем 123qwe456rty и добавлен в группу {group.name}"
             )
         )
-
 
         # создание тестового юзера №1
         try:

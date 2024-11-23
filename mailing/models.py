@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 
 from django.db import models
+
 from users.models import CustomUser
 
 
@@ -96,7 +97,10 @@ class Mailing(models.Model):
     )
 
     status = models.CharField(
-        max_length=9, choices=STATUS_CHOICES, default=CREATED, verbose_name="Статус"
+        max_length=9,
+        choices=STATUS_CHOICES,
+        default=CREATED,
+        verbose_name="Статус автоматической рассылки",
     )
 
     message = models.ForeignKey(

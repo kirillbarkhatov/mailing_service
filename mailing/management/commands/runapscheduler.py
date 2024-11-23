@@ -1,21 +1,40 @@
 import logging
 
-from django.conf import settings
-from django.db.models import Q
-
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
+from django.conf import settings
+from django.core.mail import send_mail
 from django.core.management.base import BaseCommand
+from django.db.models import Q
+from django.utils.timezone import now
+from django_apscheduler import util
 from django_apscheduler.jobstores import DjangoJobStore
 from django_apscheduler.models import DjangoJobExecution
-from django_apscheduler import util
 
-from django.utils.timezone import now
 from config.settings import DEFAULT_FROM_EMAIL
 from mailing.models import Mailing, MailingAttempt
-from django.core.mail import send_mail
 
 logger = logging.getLogger(__name__)
+
+# для тестирования логгирования
+# logger.setLevel(logging.DEBUG)
+# print(logger)
+# print(logger.getEffectiveLevel())
+# logger.debug("Это сообщение DEBUG")
+# print(logger.getEffectiveLevel())
+# logger.info("Это сообщение INFO")
+# print(logger.getEffectiveLevel())
+# logger.warning("Это сообщение WARNING")
+# print(logger.getEffectiveLevel())
+# logger.error("Это сообщение ERROR")
+# print(logger.getEffectiveLevel())
+#
+# # Получаем список всех логгеров
+# loggers = logging.root.manager.loggerDict
+#
+# # Выводим уровни для всех логгеров
+# for logger_name, logger_1 in loggers.items():
+#     print(f"Logger '{logger_name}' effective level: {logger_1}")
 
 
 def send_mailing():
@@ -25,7 +44,7 @@ def send_mailing():
     mailings = Mailing.objects.filter(
         Q(status=Mailing.CREATED) | Q(status=Mailing.RUNNING),  # Логическое "ИЛИ"
         first_send_at__lte=now(),
-        finish_send_at__gte=now()
+        finish_send_at__gte=now(),
     )
 
     for mailing in mailings:
@@ -67,7 +86,7 @@ def auto_completing_mailing():
     logger.info("Запуск задачи обновления статуса рассылок...")
     mailings = Mailing.objects.filter(
         Q(status=Mailing.CREATED) | Q(status=Mailing.RUNNING),  # Логическое "ИЛИ"
-        finish_send_at__lte=now()
+        finish_send_at__lte=now(),
     )
 
     for mailing in mailings:
@@ -129,9 +148,7 @@ class Command(BaseCommand):
             max_instances=1,
             replace_existing=True,
         )
-        logger.info(
-            "Добавлена еженедельная задача 'delete_old_job_executions'."
-        )
+        logger.info("Добавлена еженедельная задача 'delete_old_job_executions'.")
 
         try:
             logger.info("Запуск планировщика...")

@@ -1,8 +1,6 @@
-from lib2to3.fixes.fix_input import context
-
 from django.core.cache import cache
 
-from .models import MailingAttempt, Mailing, Recipient, CustomUser
+from .models import CustomUser, Mailing, MailingAttempt, Recipient
 
 
 def get_index_page_cache_data(user: CustomUser) -> dict:
