@@ -13,8 +13,11 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
                     aria-label="Close"></button>
         </div>
+
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
             <ul class="nav flex-column">
+
+                {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="{% url 'mailing:index' %}">
                         <svg class="bi">
@@ -58,26 +61,59 @@
 
 
 
+
             <hr class="my-3">
+            {% endif %}
+
 
             <ul class="nav flex-column mb-auto">
+
+                {% if perms.users.can_block_user %}
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
+                    <a class="nav-link d-flex align-items-center gap-2" href="{% url 'users:users' %}">
                         <svg class="bi">
-                            <use xlink:href="/static/svg/icons-menu.svg#gear-wide-connected"/>
+                            <use xlink:href="/static/svg/icons-menu.svg#people"/>
                         </svg>
-                        Settings
+                        Пользователи системы
                     </a>
                 </li>
+                {% endif %}
+                {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
+                    <form method="post" action="{% url 'users:logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="nav-link d-flex align-items-center gap-2">
                         <svg class="bi">
                             <use xlink:href="/static/svg/icons-menu.svg#door-closed"/>
                         </svg>
-                        Sign out
+                        Выход
+                    </button>
+                    </form>
+                </li>
+
+                {% else %}
+
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center gap-2" href="{% url 'users:login' %}">
+                        <svg class="bi">
+                            <use xlink:href="/static/svg/icons-menu.svg#door-open"/>
+                        </svg>
+                        Войти
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center gap-2" href="{% url 'users:register' %}">
+                        <svg class="bi">
+                            <use xlink:href="/static/svg/icons-menu.svg#person-plus"/>
+                        </svg>
+                        Регистрация
+                    </a>
+                </li>
+
+                {% endif %}
+
             </ul>
+
         </div>
     </div>
 </div>

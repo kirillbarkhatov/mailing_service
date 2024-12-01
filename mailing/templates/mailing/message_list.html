@@ -27,10 +27,14 @@
             <td>{{ message.id }}</td>
             <td style="width: 20vh;">{{ message.title }}</td>
             <td>{{ message.message }}</td>
+            {% if message.owner == user %}
             <td class="text-end" style="width: 20vh;">
                 <a class="btn btn-outline-primary" href="{% url 'mailing:message_update' message.pk%}">Изменить</a>
                 <a class="btn btn-outline-danger" href="{% url 'mailing:message_delete' message.pk%}">Удалить</a>
             </td>
+            {% else %}
+            <td class="text-end" style="width: 20vh;"></td>
+            {% endif %}
         </tr>
         {% endfor %}
         </tbody>

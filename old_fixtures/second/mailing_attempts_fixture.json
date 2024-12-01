@@ -1,0 +1,1272 @@
+[
+{
+    "model": "mailing.mailingattempt",
+    "pk": 1,
+    "fields": {
+        "attempted_at": "2024-10-26T19:57:36.594Z",
+        "status": "success",
+        "mail_server_response": "skypro1@mailinator.com: Успешно отправлено",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 2,
+    "fields": {
+        "attempted_at": "2024-10-26T19:57:38.238Z",
+        "status": "success",
+        "mail_server_response": "skypro2@mailinator.com: Успешно отправлено",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 3,
+    "fields": {
+        "attempted_at": "2024-10-26T19:57:39.803Z",
+        "status": "success",
+        "mail_server_response": "skypro3@mailinator.com: Успешно отправлено",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 4,
+    "fields": {
+        "attempted_at": "2024-10-26T19:57:41.869Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 5,
+    "fields": {
+        "attempted_at": "2024-10-26T20:02:35.954Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 2
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 6,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:43.129Z",
+        "status": "success",
+        "mail_server_response": "skypro1@mailinator.com: Успешно отправлено",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 7,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:44.574Z",
+        "status": "success",
+        "mail_server_response": "skypro2@mailinator.com: Успешно отправлено",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 8,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:46.097Z",
+        "status": "success",
+        "mail_server_response": "skypro3@mailinator.com: Успешно отправлено",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 9,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:47.115Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 1
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 10,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:50.590Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 2
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 11,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:54.526Z",
+        "status": "success",
+        "mail_server_response": "skypro7@mailinator.com: Успешно отправлено",
+        "mailing": 4
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 12,
+    "fields": {
+        "attempted_at": "2024-10-26T22:03:56.171Z",
+        "status": "success",
+        "mail_server_response": "skypro8@mailinator.com: Успешно отправлено",
+        "mailing": 4
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 13,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:00.096Z",
+        "status": "success",
+        "mail_server_response": "skypro1@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 14,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:01.586Z",
+        "status": "success",
+        "mail_server_response": "skypro2@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 15,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:03.801Z",
+        "status": "success",
+        "mail_server_response": "skypro3@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 16,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:04.807Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 17,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:06.444Z",
+        "status": "success",
+        "mail_server_response": "skypro5@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 18,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:08.086Z",
+        "status": "success",
+        "mail_server_response": "skypro6@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 19,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:09.501Z",
+        "status": "success",
+        "mail_server_response": "skypro7@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 20,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:10.655Z",
+        "status": "failure",
+        "mail_server_response": "skypro10@linator.commmm: Ошибка: {'skypro10@linator.commmm': (550, b'non-local recipient verification failed')}",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 21,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:12.288Z",
+        "status": "success",
+        "mail_server_response": "skypro8@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 22,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:13.750Z",
+        "status": "success",
+        "mail_server_response": "skypro9@mailinator.com: Успешно отправлено",
+        "mailing": 5
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 23,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:17.819Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 6
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 24,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:19.977Z",
+        "status": "success",
+        "mail_server_response": "skypro6@mailinator.com: Успешно отправлено",
+        "mailing": 6
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 25,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:20.927Z",
+        "status": "failure",
+        "mail_server_response": "skypro10@linator.commmm: Ошибка: {'skypro10@linator.commmm': (550, b'non-local recipient verification failed')}",
+        "mailing": 6
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 26,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:22.362Z",
+        "status": "success",
+        "mail_server_response": "skypro9@mailinator.com: Успешно отправлено",
+        "mailing": 6
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 27,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:27.312Z",
+        "status": "success",
+        "mail_server_response": "skypro5@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 28,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:28.884Z",
+        "status": "success",
+        "mail_server_response": "skypro6@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 29,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:30.338Z",
+        "status": "success",
+        "mail_server_response": "skypro7@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 30,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:31.809Z",
+        "status": "success",
+        "mail_server_response": "skypro8@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 31,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:33.287Z",
+        "status": "success",
+        "mail_server_response": "skypro9@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 32,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:41.867Z",
+        "status": "success",
+        "mail_server_response": "skypro5@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 33,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:43.463Z",
+        "status": "success",
+        "mail_server_response": "skypro6@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 34,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:44.907Z",
+        "status": "success",
+        "mail_server_response": "skypro7@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 35,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:46.362Z",
+        "status": "success",
+        "mail_server_response": "skypro8@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 36,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:47.979Z",
+        "status": "success",
+        "mail_server_response": "skypro9@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 37,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:56.008Z",
+        "status": "failure",
+        "mail_server_response": "skypro4@mailinatorrrr.ccccom: Ошибка: {'skypro4@mailinatorrrr.ccccom': (550, b'non-local recipient verification failed')}",
+        "mailing": 8
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 38,
+    "fields": {
+        "attempted_at": "2024-10-26T22:04:57.025Z",
+        "status": "failure",
+        "mail_server_response": "skypro10@linator.commmm: Ошибка: {'skypro10@linator.commmm': (550, b'non-local recipient verification failed')}",
+        "mailing": 8
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 39,
+    "fields": {
+        "attempted_at": "2024-11-20T19:36:06.255Z",
+        "status": "success",
+        "mail_server_response": "qwerty@asdf.ru: Успешно отправлено",
+        "mailing": 10
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 40,
+    "fields": {
+        "attempted_at": "2024-11-20T20:21:52.424Z",
+        "status": "success",
+        "mail_server_response": "skypro5@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 41,
+    "fields": {
+        "attempted_at": "2024-11-20T20:21:54.038Z",
+        "status": "success",
+        "mail_server_response": "skypro6@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 42,
+    "fields": {
+        "attempted_at": "2024-11-20T20:21:55.502Z",
+        "status": "success",
+        "mail_server_response": "skypro7@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 43,
+    "fields": {
+        "attempted_at": "2024-11-20T20:21:55.711Z",
+        "status": "success",
+        "mail_server_response": "skypro5@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 44,
+    "fields": {
+        "attempted_at": "2024-11-20T20:21:56.939Z",
+        "status": "success",
+        "mail_server_response": "skypro8@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 45,
+    "fields": {
+        "attempted_at": "2024-11-20T20:21:57.243Z",
+        "status": "success",
+        "mail_server_response": "skypro6@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 46,
+    "fields": {
+        "attempted_at": "2024-11-20T20:21:58.518Z",
+        "status": "success",
+        "mail_server_response": "skypro9@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 47,
+    "fields": {
+        "attempted_at": "2024-11-20T20:21:58.701Z",
+        "status": "success",
+        "mail_server_response": "skypro7@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 48,
+    "fields": {
+        "attempted_at": "2024-11-20T20:22:00.266Z",
+        "status": "success",
+        "mail_server_response": "skypro8@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 49,
+    "fields": {
+        "attempted_at": "2024-11-20T20:22:01.717Z",
+        "status": "success",
+        "mail_server_response": "skypro9@mailinator.com: Успешно отправлено",
+        "mailing": 7
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 50,
+    "fields": {
+        "attempted_at": "2024-11-20T21:11:47.213Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 11
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 51,
+    "fields": {
+        "attempted_at": "2024-11-20T21:12:22.741Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 11
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 52,
+    "fields": {
+        "attempted_at": "2024-11-20T21:13:15.273Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 11
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 53,
+    "fields": {
+        "attempted_at": "2024-11-20T21:13:57.563Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 11
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 54,
+    "fields": {
+        "attempted_at": "2024-11-20T21:16:01.820Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 11
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 55,
+    "fields": {
+        "attempted_at": "2024-11-20T21:16:25.162Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 11
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 56,
+    "fields": {
+        "attempted_at": "2024-11-23T13:35:32.027Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 11
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 57,
+    "fields": {
+        "attempted_at": "2024-11-23T14:34:01.449Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 58,
+    "fields": {
+        "attempted_at": "2024-11-23T14:49:01.530Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 59,
+    "fields": {
+        "attempted_at": "2024-11-23T14:50:01.589Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 60,
+    "fields": {
+        "attempted_at": "2024-11-23T14:51:01.263Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 61,
+    "fields": {
+        "attempted_at": "2024-11-23T15:19:53.976Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 62,
+    "fields": {
+        "attempted_at": "2024-11-23T15:39:01.445Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 63,
+    "fields": {
+        "attempted_at": "2024-11-23T15:40:01.181Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 64,
+    "fields": {
+        "attempted_at": "2024-11-23T15:41:01.282Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 65,
+    "fields": {
+        "attempted_at": "2024-11-23T15:42:01.017Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 66,
+    "fields": {
+        "attempted_at": "2024-11-23T15:43:01.583Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 67,
+    "fields": {
+        "attempted_at": "2024-11-23T15:44:01.555Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 68,
+    "fields": {
+        "attempted_at": "2024-11-23T15:45:01.471Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 69,
+    "fields": {
+        "attempted_at": "2024-11-23T15:46:01.153Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 70,
+    "fields": {
+        "attempted_at": "2024-11-23T15:47:01.597Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 71,
+    "fields": {
+        "attempted_at": "2024-11-23T15:48:01.096Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 72,
+    "fields": {
+        "attempted_at": "2024-11-23T15:49:01.515Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 73,
+    "fields": {
+        "attempted_at": "2024-11-23T15:50:01.596Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 74,
+    "fields": {
+        "attempted_at": "2024-11-23T15:51:01.483Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 75,
+    "fields": {
+        "attempted_at": "2024-11-23T15:52:01.544Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 76,
+    "fields": {
+        "attempted_at": "2024-11-23T15:53:01.240Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 77,
+    "fields": {
+        "attempted_at": "2024-11-23T15:54:01.481Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 78,
+    "fields": {
+        "attempted_at": "2024-11-23T15:55:01.286Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 79,
+    "fields": {
+        "attempted_at": "2024-11-23T15:56:01.327Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 80,
+    "fields": {
+        "attempted_at": "2024-11-23T15:57:01.170Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 81,
+    "fields": {
+        "attempted_at": "2024-11-23T15:58:01.198Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 82,
+    "fields": {
+        "attempted_at": "2024-11-23T15:59:01.672Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 83,
+    "fields": {
+        "attempted_at": "2024-11-23T16:00:01.140Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 84,
+    "fields": {
+        "attempted_at": "2024-11-23T16:01:01.064Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 85,
+    "fields": {
+        "attempted_at": "2024-11-23T16:02:01.279Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 86,
+    "fields": {
+        "attempted_at": "2024-11-23T16:04:01.390Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 87,
+    "fields": {
+        "attempted_at": "2024-11-23T16:05:01.261Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 88,
+    "fields": {
+        "attempted_at": "2024-11-23T16:06:01.301Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 89,
+    "fields": {
+        "attempted_at": "2024-11-23T16:07:01.300Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 90,
+    "fields": {
+        "attempted_at": "2024-11-23T16:08:01.243Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 91,
+    "fields": {
+        "attempted_at": "2024-11-23T16:09:01.272Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 92,
+    "fields": {
+        "attempted_at": "2024-11-23T16:10:01.273Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 93,
+    "fields": {
+        "attempted_at": "2024-11-23T16:11:01.272Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 94,
+    "fields": {
+        "attempted_at": "2024-11-23T16:12:01.322Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 95,
+    "fields": {
+        "attempted_at": "2024-11-23T16:13:01.256Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 96,
+    "fields": {
+        "attempted_at": "2024-11-23T16:14:01.225Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 97,
+    "fields": {
+        "attempted_at": "2024-11-23T16:18:01.445Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 98,
+    "fields": {
+        "attempted_at": "2024-11-23T16:19:01.309Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 99,
+    "fields": {
+        "attempted_at": "2024-11-23T16:20:01.314Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 100,
+    "fields": {
+        "attempted_at": "2024-11-23T16:21:01.410Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 101,
+    "fields": {
+        "attempted_at": "2024-11-23T16:22:01.471Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 102,
+    "fields": {
+        "attempted_at": "2024-11-23T16:23:01.277Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 103,
+    "fields": {
+        "attempted_at": "2024-11-23T16:24:01.323Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 104,
+    "fields": {
+        "attempted_at": "2024-11-23T16:25:01.295Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 105,
+    "fields": {
+        "attempted_at": "2024-11-23T16:26:01.850Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 106,
+    "fields": {
+        "attempted_at": "2024-11-23T16:27:01.186Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 107,
+    "fields": {
+        "attempted_at": "2024-11-23T16:28:01.352Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 108,
+    "fields": {
+        "attempted_at": "2024-11-23T16:29:01.595Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 109,
+    "fields": {
+        "attempted_at": "2024-11-23T16:30:01.547Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 110,
+    "fields": {
+        "attempted_at": "2024-11-23T16:31:01.599Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 111,
+    "fields": {
+        "attempted_at": "2024-11-23T16:32:01.366Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 112,
+    "fields": {
+        "attempted_at": "2024-11-23T16:33:01.388Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 113,
+    "fields": {
+        "attempted_at": "2024-11-23T16:34:01.515Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 114,
+    "fields": {
+        "attempted_at": "2024-11-23T16:35:01.558Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 115,
+    "fields": {
+        "attempted_at": "2024-11-23T16:36:01.330Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 116,
+    "fields": {
+        "attempted_at": "2024-11-23T16:37:01.499Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 117,
+    "fields": {
+        "attempted_at": "2024-11-23T16:38:01.514Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 118,
+    "fields": {
+        "attempted_at": "2024-11-23T16:39:01.455Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 119,
+    "fields": {
+        "attempted_at": "2024-11-23T16:40:01.457Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 120,
+    "fields": {
+        "attempted_at": "2024-11-23T16:41:02.468Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 121,
+    "fields": {
+        "attempted_at": "2024-11-23T16:42:01.461Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 122,
+    "fields": {
+        "attempted_at": "2024-11-23T16:43:01.347Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 123,
+    "fields": {
+        "attempted_at": "2024-11-23T16:44:02.115Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 124,
+    "fields": {
+        "attempted_at": "2024-11-23T16:45:01.294Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 125,
+    "fields": {
+        "attempted_at": "2024-11-23T16:46:01.247Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 126,
+    "fields": {
+        "attempted_at": "2024-11-23T16:47:01.594Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+},
+{
+    "model": "mailing.mailingattempt",
+    "pk": 127,
+    "fields": {
+        "attempted_at": "2024-11-23T16:48:01.081Z",
+        "status": "failure",
+        "mail_server_response": "3@3.jhkgn: Ошибка: {'3@3.jhkgn': (550, b'non-local recipient verification failed')}",
+        "mailing": 12
+    }
+}
+]
