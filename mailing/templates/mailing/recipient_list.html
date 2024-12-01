@@ -29,10 +29,14 @@
             <td>{{ recipient.email }}</td>
             <td>{{ recipient.full_name }}</td>
             <td>{{ recipient.comment }}</td>
+            {% if recipient.owner == user %}
             <td class="text-end" style="width: 20vh;">
                 <a class="btn btn-outline-primary" href="{% url 'mailing:recipient_update' recipient.pk%}">Изменить</a>
                 <a class="btn btn-outline-danger" href="{% url 'mailing:recipient_delete' recipient.pk%}">Удалить</a>
             </td>
+            {% else %}
+            <td class="text-end" style="width: 20vh;"></td>
+            {% endif %}
         </tr>
         {% endfor %}
         </tbody>

@@ -1,0 +1,114 @@
+[
+{
+    "model": "mailing.mailing",
+    "pk": 1,
+    "fields": {
+        "first_send_at": "2024-10-21T20:27:29Z",
+        "finish_send_at": "2024-10-21T20:27:30Z",
+        "status": "created",
+        "message": 1,
+        "recipients": [
+            5,
+            6,
+            7,
+            8
+        ]
+    }
+},
+{
+    "model": "mailing.mailing",
+    "pk": 2,
+    "fields": {
+        "first_send_at": "2024-10-21T20:28:17Z",
+        "finish_send_at": "2024-10-21T20:28:18Z",
+        "status": "running",
+        "message": 3,
+        "recipients": [
+            8
+        ]
+    }
+},
+{
+    "model": "mailing.mailing",
+    "pk": 4,
+    "fields": {
+        "first_send_at": "2024-10-26T21:36:17Z",
+        "finish_send_at": "2024-10-26T21:36:17Z",
+        "status": "running",
+        "message": 6,
+        "recipients": [
+            11,
+            13
+        ]
+    }
+},
+{
+    "model": "mailing.mailing",
+    "pk": 5,
+    "fields": {
+        "first_send_at": "2024-10-26T21:36:17Z",
+        "finish_send_at": "2024-10-26T21:36:17Z",
+        "status": "created",
+        "message": 5,
+        "recipients": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+        ]
+    }
+},
+{
+    "model": "mailing.mailing",
+    "pk": 6,
+    "fields": {
+        "first_send_at": "2024-10-26T21:36:17Z",
+        "finish_send_at": "2024-10-26T21:36:17Z",
+        "status": "created",
+        "message": 7,
+        "recipients": [
+            8,
+            10,
+            12,
+            14
+        ]
+    }
+},
+{
+    "model": "mailing.mailing",
+    "pk": 7,
+    "fields": {
+        "first_send_at": "2024-10-26T21:36:17Z",
+        "finish_send_at": "2024-10-26T21:36:17Z",
+        "status": "created",
+        "message": 6,
+        "recipients": [
+            9,
+            10,
+            11,
+            13,
+            14
+        ]
+    }
+},
+{
+    "model": "mailing.mailing",
+    "pk": 8,
+    "fields": {
+        "first_send_at": "2024-10-26T21:36:17Z",
+        "finish_send_at": "2024-10-26T21:36:17Z",
+        "status": "running",
+        "message": 3,
+        "recipients": [
+            8,
+            12
+        ]
+    }
+}
+]

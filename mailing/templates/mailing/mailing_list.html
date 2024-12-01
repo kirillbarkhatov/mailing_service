@@ -19,7 +19,7 @@
             <th scope="col">#</th>
             <th scope="col">Дата и время первой отправки</th>
             <th scope="col">Дата и время окончания отправки</th>
-            <th scope="col">Статус</th>
+            <th scope="col">Статус автоматической рассылки</th>
             <th scope="col">Сообщение</th>
             <th scope="col">Получатели</th>
         </tr>
@@ -30,7 +30,16 @@
             <td>{{ mailing.id }}</td>
             <td>{{ mailing.first_send_at }}</td>
             <td>{{ mailing.finish_send_at }}</td>
-            <td>{{ mailing.status }}</td>
+            <td>{{ mailing.status }}
+            {% if mailing.owner == user or is_manager %}
+                {% if mailing.status != "completed" %}
+                <form action="{% url 'mailing:mailing_stop' mailing.pk %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-danger btn-sm">Завершить/отключить</button>
+                </form>
+                {% endif %}
+                {% endif %}
+            </td>
             <td>{{ mailing.message }}</td>
             <td>
 
@@ -39,13 +48,18 @@
                 {% endfor %}
 
 
-
             </td>
+
             <td class="text-end">
-                <a class="btn btn-outline-primary" href="{% url 'mailing:mailing_detail' mailing.pk%}">Разослать</a>
+                {% if mailing.owner == user %}
+
+                <a class="btn btn-outline-primary" href="{% url 'mailing:mailing_detail' mailing.pk%}">Разослать вручную</a>
+
                 <a class="btn btn-outline-primary" href="{% url 'mailing:mailing_update' mailing.pk%}">Изменить</a>
                 <a class="btn btn-outline-danger" href="{% url 'mailing:mailing_delete' mailing.pk%}">Удалить</a>
+                {% endif %}
             </td>
+
         </tr>
         {% endfor %}
         </tbody>
